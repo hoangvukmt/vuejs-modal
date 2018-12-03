@@ -1,0 +1,12 @@
+{
+    "btnBase": "Gọi event trong base",
+    "btnComponent": "Gọi event trong component",
+    "btnCallPostApi": "Gọi api phương thức post",
+    "message": "Đoạn text này được lấy trong base",
+    "alter": "Sự kiện được xử lý trong base",
+    "menu": {
+        "home": "Home",
+        "about": "About"
+    },
+    "error": "Đã có lỗi xảy ra!"
+}

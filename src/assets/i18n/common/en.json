@@ -1,0 +1,12 @@
+{
+    "btnBase": "Call method from base",
+    "btnComponent": "Call method from component",
+    "btnCallApi": "Call api",
+    "message": "message from base",
+    "alter": "base doing some thing",
+    "menu": {
+        "home": "Home",
+        "about": "About"
+    },
+    "error": "Error!"
+}
