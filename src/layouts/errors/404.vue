@@ -1,7 +1,5 @@
 <template>
-    <master-layout>
-        <p>Page not found</p>
-    </master-layout>
+    <p>Page not found</p>
 </template>
 
 <script src="./404.controller.js"></script>
