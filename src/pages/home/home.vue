@@ -5,6 +5,7 @@
         <button v-on:click="methodFromBase()">{{ $t("common.btnBase") }}</button>
         <button v-on:click="methodFromComponent()">{{ $t("common.btnComponent") }}</button>
         <button v-on:click="callPostApi()">{{ $t("common.btnCallPostApi") }}</button>
+        <button v-on:click="callPopup()">{{ $t("common.btnCallPopup") }}</button>
     </master-layout>
 </template>
 

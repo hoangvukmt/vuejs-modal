@@ -6,7 +6,7 @@
                 <v-link v-bind:href="CONST.ROUTER_URL.about">{{ $t("common.menu.about") }}</v-link>
             </li>
         </ul>
-
+        <vue-progress-bar></vue-progress-bar>
         <slot></slot>
     </div>
 </template>

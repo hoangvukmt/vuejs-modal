@@ -1,7 +1,8 @@
 {
     "btnBase": "Call method from base",
     "btnComponent": "Call method from component",
-    "btnCallApi": "Call api",
+    "btnCallPostApi": "Call api",
+    "btnCallPopup": "Open popup",
     "message": "message from base",
     "alter": "base doing some thing",
     "menu": {

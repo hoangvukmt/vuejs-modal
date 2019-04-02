@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueProgressBar from 'vue-progressbar';
 import page from 'page'
 import VueI18n from 'vue-i18n'
 import VueResource from 'vue-resource';
@@ -12,13 +13,26 @@ Vue.use(Toasted, {
     closeOnSwipe: true,
     duration: 2000
 });
-Vue.http.interceptors.push((request, next) => {
-    let contentType = 'application/json';
+Vue.use(VueProgressBar, {
+    color: 'blue',
+    failedColor: 'red',
+    height: '5px',
+    autoFinish: false
+});
 
+Vue.http.interceptors.push((request, next)  => {
+    window["vueApp"].$Progress.start();
+    let contentType = 'application/json';
     request.headers['Content-Type'] = contentType;
     request.headers['x-access-token'] = localStorage.getItem('id_token') == null ? '' : localStorage.getItem('id_token');
-
-    next();
+    next((response) => {
+        if (response.ok) {
+            window["vueApp"].$Progress.finish();
+        }
+        else {
+            window["vueApp"].$Progress.fail();
+        }
+    });
 });
 
 const locale = localStorage.getItem('language') !== null ? localStorage.getItem('language') : 'vn';

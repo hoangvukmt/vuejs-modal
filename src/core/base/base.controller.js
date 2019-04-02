@@ -5,11 +5,19 @@ export default {
         };
     },
     created: function() {
-        
     },
     methods: {
         methodFromBase: function() {
-            this.$toasted.info(this.$i18n.t('common.alter'), { icon: 'notification_important' });
+            this.toastedInfo(this.$i18n.t('common.alter'));
+        },
+        toastedSuccess: function(message) {
+            this.$toasted.success(message, { icon: 'check' });
+        },
+        toastedInfo: function(message) {
+            this.$toasted.info(message, { icon: 'info' });
+        },
+        toastedError: function(message) {
+            this.$toasted.error(message, { icon: 'error_outline' });
         }
     }
 }

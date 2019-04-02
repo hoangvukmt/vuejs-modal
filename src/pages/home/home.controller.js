@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         methodFromComponent: function() {
-            this.$toasted.info(this.$i18n.t('private.alter'), { icon: 'notification_important' });
+            this.toastedInfo(this.$i18n.t('private.alter'));
         },
         callPostApi: function() {
             let data = {
@@ -26,6 +26,9 @@ export default {
                     
                 }
             });
+        },
+        callPopup: function() {
+            
         }
     }
 }

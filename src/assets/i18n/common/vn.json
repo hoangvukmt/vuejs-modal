@@ -2,6 +2,7 @@
     "btnBase": "Gọi event trong base",
     "btnComponent": "Gọi event trong component",
     "btnCallPostApi": "Gọi api phương thức post",
+    "btnCallPopup": "Mở popup",
     "message": "Đoạn text này được lấy trong base",
     "alter": "Sự kiện được xử lý trong base",
     "menu": {
