@@ -1,10 +1,11 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import VueProgressBar from 'vue-progressbar';
-import page from 'page'
-import VueI18n from 'vue-i18n'
+import page from 'page';
+import VueI18n from 'vue-i18n';
 import VueResource from 'vue-resource';
 import Toasted from 'vue-toasted';
-import routes from './routes'
+import VModal from 'vue-js-modal';
+import routes from './routes';
 
 Vue.use(VueI18n);
 Vue.use(VueResource);
@@ -19,6 +20,7 @@ Vue.use(VueProgressBar, {
     height: '5px',
     autoFinish: false
 });
+Vue.use(VModal, { dynamic: true, injectModalsContainer: true });
 
 Vue.http.interceptors.push((request, next)  => {
     window["vueApp"].$Progress.start();

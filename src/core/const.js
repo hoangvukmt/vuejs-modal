@@ -18,5 +18,9 @@ export default {
         NOT_EXIST: '404',
         REQUIRED: '101',
         ERROR: '500'
+    },
+    MODAL_OPTION: {
+        draggable: true, 
+        clickToClose: false 
     }
 };

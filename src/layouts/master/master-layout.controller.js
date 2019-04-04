@@ -1,4 +1,4 @@
-import VLink from '../../components/v-link.vue'
+import VLink from '../../components/v-link/v-link.vue'
 import CONST from '../../core/const'
 
 export default {

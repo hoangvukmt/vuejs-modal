@@ -2,11 +2,16 @@ import MasterLayout from '../../layouts/master/master-layout.vue'
 import BaseController from '../../core/base/base.vue'
 import httpService from '../../core/services/httpService'
 import CONST from '../../core/const'
+import VModal from '../../components/v-modal/v-modal.vue'
 
 export default {
     extends: BaseController,
     components: {
-        MasterLayout
+        MasterLayout,
+        VModal
+    },
+    created: function() {
+        this.$root.$on('modalSelected', this.modalSelected);
     },
     data: function() {
         return {
@@ -28,7 +33,14 @@ export default {
             });
         },
         callPopup: function() {
-            
+            this.$modal.show(VModal, {
+                params: {
+                    type: "test"
+                }
+            }, CONST.MODAL_OPTION);
+        },
+        modalSelected: function (selected) {
+            console.log(selected);
         }
     }
 }

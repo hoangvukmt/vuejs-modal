@@ -7,6 +7,7 @@
             </li>
         </ul>
         <vue-progress-bar></vue-progress-bar>
+        <modals-container />
         <slot></slot>
     </div>
 </template>
