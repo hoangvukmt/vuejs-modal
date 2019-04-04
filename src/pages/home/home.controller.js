@@ -33,11 +33,13 @@ export default {
             });
         },
         callPopup: function() {
-            this.$modal.show(VModal, {
+            let modalSearch = {
                 params: {
                     type: "test"
                 }
-            }, CONST.MODAL_OPTION);
+            };
+            
+            this.$modal.show(VModal, modalSearch, CONST.MODAL_OPTION);
         },
         modalSelected: function (selected) {
             console.log(selected);
